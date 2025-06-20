@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AgChartsDashboard } from "../components/bi-ui-kit/AgChartsDashboard";
+import { DrilldownChart } from "../components/bi-ui-kit/DrilldownChart";
 
 import { TimePeriodSelector } from "../components/filters/TimePeriodSelector";
 import { useVisualizationData } from "../hooks/data-adapters/useVisualizationData";
@@ -21,6 +22,7 @@ export const MyDashboardPage = () => {
       <hr />
       <AgChartsDashboard isLoading={isLoading} data={data || []} />
       <hr />
+      <DrilldownChart data={data || []} />
     </div>
   );
 };
